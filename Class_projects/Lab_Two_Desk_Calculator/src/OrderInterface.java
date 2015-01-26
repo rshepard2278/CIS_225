@@ -1,0 +1,37 @@
+import java.util.ArrayList;
+
+/**
+ * @author Richard Shepard
+ * @version 1.20.2015
+ */
+
+public class OrderInterface {
+	
+	private ArrayList<Customer> customers;
+
+	public OrderInterface() {
+		customers = new ArrayList<Customer>();
+	}
+	
+	public void start() {
+		boolean continueFlag = true;
+		while (continueFlag) {
+			addCustomer();
+			System.out.print("\nWould you like to add another customer ?");
+			continueFlag = TextIO.getlnBoolean();
+		}
+		printCustomers();
+	}
+	
+	private void addCustomer() {
+		customers.add(new Customer());
+	}
+
+	private void printCustomers() {
+		System.out.println("Printing list of " + customers.size());
+		for (int i = 0; i < customers.size(); i++) {
+			Customer current = customers.get(i);
+			System.out.print(current.toString());
+		}
+	}
+}

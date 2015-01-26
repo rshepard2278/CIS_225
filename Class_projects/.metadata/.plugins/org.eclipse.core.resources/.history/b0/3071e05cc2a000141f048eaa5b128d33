@@ -1,0 +1,10 @@
+
+public class OrderInterface {
+
+	public static void main(String[] args) {
+		Customer bill = new Customer();
+		bill.toString();
+
+	}
+
+}

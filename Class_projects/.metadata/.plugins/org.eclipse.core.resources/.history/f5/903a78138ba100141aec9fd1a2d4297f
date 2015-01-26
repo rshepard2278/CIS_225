@@ -1,0 +1,9 @@
+
+public class StartInterface {
+
+	public static void main(String[] args) {
+		OrderInterface deskSales = new OrderInterface();
+		deskSales.start();
+	}
+
+}
